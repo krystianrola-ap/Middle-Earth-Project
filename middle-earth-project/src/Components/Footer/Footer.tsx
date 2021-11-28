@@ -1,11 +1,9 @@
 import React from "react";
 
-
-
-export const Header = () => {
-    return(
-        <div> 
+export const Footer = () =>{
+    return (
+        <div>
             
         </div>
     )
-};
+}

@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @layer utilities {
+    .bg-main-image{
+        background-image: url("../src/images/background-main-page.jpg");
+    }
+} */
+
+/* @layer components {
+    .something {
+        @apply 
+    }
+} */
