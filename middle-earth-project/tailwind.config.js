@@ -11,7 +11,20 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      width: ['hover', 'focus'],
+      padding: ['hover', 'focus', 'group-hover']
+    },
   },
   plugins: [],
 }
+
+/**
+ * SCREEN BREAKPOINTS:
+ * sm: 340px,
+ * md: 768px,
+ * lg: 1024px,
+ * xl: 1280px,
+ * 2xl: 1536px,
+ * 3xl: 1800px
+ */
