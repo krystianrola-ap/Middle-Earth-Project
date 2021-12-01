@@ -7,13 +7,40 @@ module.exports = {
         'main-image': "url('../src/images/ring-eye-background.jpg')",
         //'hobbit-logo': "url('../src/images/hobbit-logo.jpg')",
         
+      }, 
+      keyframes:{
+        'left-fade-in':{
+          '0%' :{
+            opacity: '0',
+            transform: 'translateX(-50px)',
+          },
+          '100%':{
+            opacity: '1',
+            transform: 'translateX(0px)',
+          }
+        },
+        'right-fade-in':{
+          '0%' :{
+            opacity: '0',
+            transform: 'translateX(50px)',
+          },
+          '100%':{
+            opacity: '1',
+            transform: 'translateX(0px)',
+          }
+        }
+      },
+      animation:{
+        'left-animation-fade-in' : 'left-fade-in 2s ease-out',
+        'right-animation-fade-in' : 'right-fade-in 2s ease-out'
       }
     },
   },
   variants: {
     extend: {
       width: ['hover', 'focus'],
-      padding: ['hover', 'focus', 'group-hover']
+      padding: ['hover', 'focus', 'group-hover'],
+
     },
   },
   plugins: [],
