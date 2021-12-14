@@ -1,5 +1,5 @@
 export const sectionStyle: string = `
-    w-screen min-h-screen 
+    w-full min-h-full 
     flex flex-row
     bg-main-image bg-center bg-no-repeat bg-cover bg-opacity-50
 `;

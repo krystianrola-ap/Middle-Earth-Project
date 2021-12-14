@@ -5,6 +5,7 @@ import { StartingPage } from "../Pages/StartingPage/StartingPage";
 import { TheHobbitHome } from "../Pages/Hobbit/HobbitHome";
 import { TheOneRingHome } from "../Pages/Lord-of-the-Rings/TheOneRingHome";
 import { Journeys, IHeaderListItem } from "../types";
+import { container, appContainer } from "./styling";
 
 function App() {
   const [journey, setJourney] = useState<boolean>();
@@ -12,11 +13,11 @@ function App() {
 
   useEffect(() => {
     let chosenJourney = sessionStorage.getItem("journey");
-    if (chosenJourney === null) {
-      setJourney(false);
-      return;
+    console.log(chosenJourney);
+    if (chosenJourney !== null) {
+      setJourney(true);
+      setJourneyChoose(chosenJourney as Journeys);
     }
-    setJourneyChoose(chosenJourney as Journeys);
   }, []);
 
   const handleJourneyChoose = (value: boolean) => {
@@ -26,45 +27,44 @@ function App() {
   const headerListItems: IHeaderListItem[] = [
     {
       title: "Home",
-      url: "home"
+      url: `${journeyChoose}`,
     },
     {
       title: "choose your journey",
-      url: "choose-your-journey"
+      url: "",
     },
     {
       title: "T.B.A",
-      url: ""
+      url: "",
     },
     {
       title: "T.B.A",
-      url: ""
-    }
+      url: "",
+    },
   ];
 
   return (
-    <Router>
+    <div className={container}>
+      <Router>
       {!journey ? (
         <StartingPage handleChoose={handleJourneyChoose} />
       ) : (
-        <div>
+        <div className={appContainer}>
           <Header listItems={headerListItems} />
           <Switch>
-            {journeyChoose === Journeys.HOBBIT && (
-              <Route path="/hobbit">
-                <TheHobbitHome />
-              </Route>
-            )}
-            {journeyChoose === Journeys.LORD_OF_THE_RINGS && (
-              <Route path="/lord-of-the-rings">
-                <TheOneRingHome />
-              </Route>
-            )}
+            <Route path="/hobbit">
+              <TheHobbitHome />
+            </Route>
+
+            <Route path="/lord-of-the-rings">
+              <TheOneRingHome />
+            </Route>
           </Switch>
           {/* footer */}
         </div>
       )}
     </Router>
+    </div>
   );
 }
 

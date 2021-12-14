@@ -13,6 +13,7 @@ IconButton
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IHeaderListItem } from "../../types";
+import {headerStyle} from "./styling";
 
 interface HeaderProps { 
     listItems: IHeaderListItem[]
@@ -30,8 +31,8 @@ export const Header = ({listItems}: HeaderProps) => {
     };
 
     return(
-        <Box>
-            <AppBar position="fixed">
+        <Box className={headerStyle}>
+            <AppBar position="static" > 
                 <Toolbar>
                     <IconButton
                         aria-label="drawer menu"
@@ -52,8 +53,8 @@ export const Header = ({listItems}: HeaderProps) => {
                 <List>
                     {
                     listItems.map((listItem :IHeaderListItem)=> (
-                        <NavLink to={`/${listItem.url}`} >
-                            <ListItem button key={listItem.title}>
+                        <NavLink to={`/${listItem.url}`} key={listItem.title} >
+                            <ListItem button>
                                 <ListItemText primary={listItem.title} />
                             </ListItem>
                         </NavLink>
