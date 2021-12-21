@@ -14,7 +14,6 @@ const App = () => {
   const [chosenJourney, setChosenJourney] = useState<Journeys>();
 
   useEffect(() => {
-    document.title = "Journey Through Middle-Earth";
     let chosenJourney = sessionStorage.getItem("journey");
     if (chosenJourney !== null) {
       setJourney(true);

@@ -4,6 +4,8 @@ import './index.css';
 import App from './App/App';
 import reportWebVitals from './reportWebVitals';
 
+document.title = "Journey Through Middle-Earth";
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
