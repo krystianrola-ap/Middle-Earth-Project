@@ -15,6 +15,9 @@ module.exports = {
         'border-blur': '0px 0px 5px 5px rgba(255, 255, 255, .10)',
         'hover-blur': '0 10px 6px -6px rgba(255, 223, 0, .30)',
       },
+      fontSize:{
+        'header-fontsize': '1.75rem'
+      },
       fontFamily: {
         'hobbiton': ['Hobbiton', 'serif'],
         'elvish': ['Elvish', 'serif'],

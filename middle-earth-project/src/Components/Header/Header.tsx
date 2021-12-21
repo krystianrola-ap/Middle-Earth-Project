@@ -13,7 +13,7 @@ export const Header = ({ listItems }: HeaderProps) => {
   return (
     <div className={headerStyle}>
       {listItems.map((menuItem) => 
-        <NavLink to={`/${menuItem.url}`} key={menuItem.title} className={navlinkStyle}>
+        <NavLink to={`/lord-of-the-rings${menuItem.url}`} key={menuItem.title} className={navlinkStyle}>
             <p className={menuItemStyle}> {menuItem.title} </p>
         </NavLink> 
       )}

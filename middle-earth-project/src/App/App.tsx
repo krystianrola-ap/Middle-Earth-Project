@@ -28,19 +28,19 @@ const App = () => {
   const headerListItems: IHeaderListItem[] = [
     {
       title: "Home",
-      url: `${journeyChoose}`,
-    },
-    {
-      title: "choose your journey",
       url: "",
     },
     {
-      title: "T.B.A",
-      url: "",
+      title: "Choose your journey",
+      url: "/soms",
     },
     {
-      title: "T.B.A",
-      url: "",
+      title: "Characters",
+      url: "/characters",
+    },
+    {
+      title: "Guess the quote",
+      url: "/ss",
     },
   ];
 

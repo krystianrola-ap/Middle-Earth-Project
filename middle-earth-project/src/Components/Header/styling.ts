@@ -11,8 +11,8 @@ export const navlinkStyle = ` h-full `;
 export const menuItemStyle = 
 `
 flex flex-row justify-center items-center
-px-4 mx-2 h-full
+mx-6 h-full
 rounded-sm
-font-elvish text-xl text-white
+font-hobbiton text-header-fontsize text-white tracking-widest
 hover:border-b hover:border-menu-item-color 
 `;
