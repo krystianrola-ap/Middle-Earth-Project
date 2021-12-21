@@ -8,7 +8,21 @@ export interface IHeaderListItem {
     url : string
 }
 
-export interface IMovieInfo {
+export interface IMovie {
+    id: string;
+    title: string;
+    author: string;
+    genre: string[];
+    releaseYear: string;
+    summary: string[];
+    movieURL: string;
+}
+
+export interface IMovieSummaries {
+    movie: IMovie[];
+}
+
+export interface IMovieInfoAPI {
     _id: string;
     name: string;
     runtimeInMinutes: number;
@@ -20,7 +34,7 @@ export interface IMovieInfo {
 }
 
 export interface IJsonMovies {
-    docs: IMovieInfo[];
+    docs: IMovieInfoAPI[];
     total: number;
     limit: number;
     offset: number;

@@ -7,17 +7,17 @@ import { TheOneRingHome } from "../Pages/Lord-of-the-Rings/TheOneRingHome";
 import { Journeys, IHeaderListItem } from "../types";
 import { container, appContainer } from "./styling";
 import { Footer } from "../Components/Footer/Footer";
+import { MovieDetailPage } from "../Pages/MovieDetailPage/MovieDetailPage";
 
 const App = () => {
   const [journey, setJourney] = useState<boolean>();
-  const [journeyChoose, setJourneyChoose] = useState<Journeys>();
+  const [chosenJourney, setChosenJourney] = useState<Journeys>();
 
   useEffect(() => {
     let chosenJourney = sessionStorage.getItem("journey");
-    console.log(chosenJourney);
     if (chosenJourney !== null) {
       setJourney(true);
-      setJourneyChoose(chosenJourney as Journeys);
+      setChosenJourney(chosenJourney as Journeys);
     }
   }, []);
 
@@ -44,15 +44,20 @@ const App = () => {
     },
   ];
 
+  console.log(chosenJourney);
+
   return (
     <div className={container}>
       <Router>
-      {!journey ? (
-        <StartingPage handleChoose={handleJourneyChoose} />
-      ) : (
+      {!journey 
+      ? ( <StartingPage handleChoose={handleJourneyChoose} /> ) 
+      : (
         <div className={appContainer}>
           <Header listItems={headerListItems} />
           <Switch>
+            <Route path={`/${chosenJourney}/:id`}>
+              <MovieDetailPage />
+            </Route>
             <Route path="/hobbit">
               <TheHobbitHome />
             </Route>
@@ -60,7 +65,7 @@ const App = () => {
               <TheOneRingHome />
             </Route>
             <Route path="/">
-              <Redirect to={`/${headerListItems[0].url}`} />
+              <Redirect to={`/${chosenJourney}`} />
             </Route>
           </Switch>
           <Footer/>

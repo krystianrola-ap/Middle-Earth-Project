@@ -28,6 +28,9 @@ module.exports = {
         'header':'6.5%', 
         'footer': '5.5%', 
       },
+      width: {
+        'body': '70%'
+      },
       keyframes:{
         'left-fade-in':{
           '0%' :{

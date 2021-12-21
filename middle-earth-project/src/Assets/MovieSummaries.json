@@ -1,0 +1,77 @@
+{
+    "movie": [
+        {
+            "id" : "5cd95395de30eff6ebccde58",
+            "title" : "The Unexpected Journey",
+            "author" : "J.R.R. Tolkien",
+            "genre": ["action", "adventure", "fantasy"],
+            "releaseYear":"2012",
+            "summary": [
+                "The adventure follows the journey of title character Bilbo Baggins, who is swept into an epic quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug. Approached out of the blue by the wizard Gandalf the Grey, Bilbo finds himself joining a company of thirteen dwarves led by the legendary warrior, Thorin Oakenshield. Their journey will take them into the Wild; through treacherous lands swarming with Goblins and Orcs, deadly Wargs and Giant Spiders, Shapeshifters and Sorcerers.",
+                "Although their goal lies to the East and the wastelands of the Lonely Mountain first they must escape the goblin tunnels, where Bilbo meets the creature that will change his life forever... Gollum. Here, alone with Gollum, on the shores of an underground lake, the unassuming Bilbo Baggins not only discovers depths of guile and courage that surprise even him, he also gains possession of Gollum's \"precious\" ring that holds unexpected and useful qualities... A simple, gold ring that is tied to the fate of all Middle-earth in ways Bilbo cannot begin to know."
+            ],
+            "movieURL": "an_unexpected_journey"
+        },
+        {
+            "id" : "5cd95395de30eff6ebccde59",
+            "title" : "The Desolation of Smaug",
+            "author" : "J.R.R. Tolkien",
+            "genre": ["action", "adventure", "fantasy"],
+            "releaseYear":"2013",
+            "summary": [
+                "“The Hobbit: The Desolation of Smaug” continues the adventure of the title character Bilbo Baggins as he journeys with the Wizard Gandalf and thirteen Dwarves, led by Thorin Oakenshield, on an epic quest to reclaim the Lonely Mountain and the lost Dwarf Kingdom of Erebor. Having survived the beginning of their unexpected journey, the Company continues East, encountering along the way the skin-changer Beorn and a swarm of giant Spiders in the treacherous forest of Mirkwood. After escaping capture by the dangerous Wood-elves, the Dwarves journey to Lake-town, and finally to the Lonely Mountain itself, where they must face the greatest danger of all — a creature more terrifying than any other; one which will test not only the depth of their courage but the limits of their friendship and the wisdom of the journey itself — the Dragon Smaug."
+            ],
+            "movieURL": "the_desolation_of_smaug"
+        },
+        {
+            "id" : "5cd95395de30eff6ebccde5a",
+            "title" : "The Battle of the Five Armies",
+            "author" : "J.R.R. Tolkien",
+            "genre": ["action", "adventure", "drama", "fantasy"],
+            "releaseYear":"2014",
+            "summary": [
+                "The Hobbit: The Battle of the Five Armies brings to an epic conclusion the adventures of Bilbo Baggins, Thorin Oakenshield and the Company of Dwarves. Having reclaimed their homeland from the Dragon Smaug, the Company has unwittingly unleashed a deadly force into the world. Enraged, Smaug rains his fiery wrath down upon the defenseless men, women and children of Lake-town.",
+                "Obsessed above all else with his reclaimed treasure, Thorin sacrifices friendship and honor to hoard it as Bilbo’s frantic attempts to make him see reason drive the Hobbit towards a desperate and dangerous choice. But there are even greater dangers ahead. Unseen by any but the Wizard Gandalf, the great enemy Sauron has sent forth legions of Orcs in a stealth attack upon the Lonely Mountain.",
+                "As darkness converges on their escalating conflict, the races of Dwarves, Elves and Men must decide – unite or be destroyed. Bilbo finds himself fighting for his life and the lives of his friends in the epic Battle of the Five Armies, as the future of Middle-earth hangs in the balance."
+            ],
+            "movieURL": "the_battle_of_the_five_armies"
+        },
+        {
+            "id" : "5cd95395de30eff6ebccde5c",
+            "title" : "The Fellowship of the Ring",
+            "author" : "J.R.R. Tolkien",
+            "genre": ["action", "adventure", "drama", "fantasy"],
+            "releaseYear":"2001",
+            "summary": [
+                "Sauron, the Dark Lord, has awakened and threatens to conquer Middle-earth. To stop this ancient evil once and for all, Frodo Baggins must destroy the One Ring in the fires of Mount Doom. Men, Hobbits, a wizard, an Elf, and a Dwarf form a fellowship to help him on his quest.",
+                "He travels from his home in the Shire with fellow hobbits Sam, Merry, and Pippin. They go to the town of Bree, where the group meets a shadowy figure known only as Strider. Pursued by Black Riders, they must get to Rivendell. Upon their arrival a council is convened, which decides the only course of action must be to take The Ring to Mordor and destroy it. Frodo is joined by his friends Sam, Merry, Pippin, Aragorn, and Gandalf; and newcomers Gimli, Legolas, and Boromir. They try to cross over the Misty Mountains by way of the Pass of Caradhras, but Saruman's magic forces them to turn back and travel underneath, through the mines of Moria. It is here that the Fellowship encounters a Balrog. Gandalf challenges the Balrog, and falls from the Bridge of Khazad-dûm into a chasm, presumably to his death. The Fellowship (excluding Gandalf) then travel to the country of the elves in Lothlórien, and down the Great River on boats, where the company splits during an attack by Uruk-hai. Boromir is killed, and Aragorn, Gimli, and Legolas split off to track the Uruk-hai who have captured Merry and Pippin. Frodo and Sam head east in the direction of Mordor."
+            ],
+            "movieURL": "fellowship_of_the_ring"
+        },
+        {
+            "id" : "5cd95395de30eff6ebccde5b",
+            "title" : "The Two Towers",
+            "author" : "J.R.R. Tolkien",
+            "genre": ["action", "adventure", "drama", "fantasy"],
+            "releaseYear":"2002",
+            "summary": [
+                "The surviving members of the Fellowship have split into three groups. Frodo and Sam face many perils on their continuing quest to save Middle-earth by destroying the One Ring in the fires of Mount Doom. Merry and Pippin escape from the Orcs and must convince the Ents to join the battle against evil. Aragorn, Gimli and Legolas encounter a mysteriously transformed Gandalf and battle Saruman's army at Helm's Deep."
+            ],
+            "movieURL": "two_towers"
+        },
+        {
+            "id" : "5cd95395de30eff6ebccde5d",
+            "title" : "The Return of the King",
+            "author" : "J.R.R. Tolkien",
+            "genre": ["action", "adventure", "drama", "fantasy"],
+            "releaseYear":"2003",
+            "summary": [
+                "Andy Serkis appears as Sméagol before his degradation into Gollum. This scene was actually held over from the previous film because it was felt that it would have a greater emotional impact if audiences had already seen what the Ring's influence had done to Sméagol. In his degraded state Gollum is played in the movies by a CGI character whose movements are derived from a motion-capture suit worn by Serkis, and sometimes from footage of Serkis interacting with the other actors and then digitally replaced by Gollum.",
+                "The city of Minas Tirith, glimpsed briefly in The Lord of the Rings: The Fellowship of the Ring, is seen in all its glory. The filmmakers have taken great care to base the city closely upon Tolkien's description in the book. Close-ups of the city are represented by sets and long shots by a large and highly-detailed model, often populated by CGI characters.",
+                "The film contains key scenes that occurred in the middle portion of the novel The Lord of the Rings but were not included in the film The Lord of the Rings: The Two Towers. These include the scene where the monstrous Shelob attacks Frodo and is wounded by Sam, who comes to his aid.",
+                "Other key events include the Siege of Gondor; the re-forging of the shards of Narsil into Aragorn's new sword Andúril; Aragorn, Gimli and Legolas journey through the Paths of the Dead; the epic Battle of the Pelennor Fields, the charge of the Mûmakil; Merry and Éowyn's role in the defeat of the Lord of the Nazgûl; the destruction of the One Ring; the final fall of Sauron; Aragorn's assumption of the throne and the departure of several heroes to the Undying Lands."
+            ],
+            "movieURL": "return_of_the_king"
+        }
+    ]
+}

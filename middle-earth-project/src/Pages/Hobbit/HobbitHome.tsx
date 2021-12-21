@@ -10,13 +10,13 @@ export const TheHobbitHome = () => {
 
     return(
         <section className={movieItemsContainer}>
-            <Link to="">
+            <Link to="/hobbit/an_unexpected_journey">
                 <MovieItem movieImageUrl={an_unexpected_journey}/>
             </Link>
-            <Link to="">
+            <Link to="/hobbit/the_desolation_of_smaug">
                 <MovieItem movieImageUrl={desolation_of_smaug}/>
             </Link>
-            <Link to="">
+            <Link to="/hobbit/the_battle_of_the_five_armies">
                 <MovieItem movieImageUrl={battle_of_the_five_armies}/>
             </Link>
         </section>
