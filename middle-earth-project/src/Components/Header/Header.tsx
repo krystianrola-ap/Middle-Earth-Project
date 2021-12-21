@@ -1,67 +1,22 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import {
-Box, 
-AppBar,
-Toolbar,
-Drawer,
-List,
-Typography,
-ListItem,
-ListItemText,
-IconButton
-} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IHeaderListItem } from "../../types";
-import {headerStyle} from "./styling";
+import { headerStyle, menuItemStyle, navlinkStyle } from "./styling";
 
-interface HeaderProps { 
-    listItems: IHeaderListItem[]
+interface HeaderProps {
+  listItems: IHeaderListItem[];
 }
+// Journey Through Middle Earth
 
-export const Header = ({listItems}: HeaderProps) => {
-    const [openDrawer, setOpenDrawer] = useState<boolean>(false);
-
-    const handleOpenDrawer: React.MouseEventHandler<HTMLButtonElement> = () => {
-        setOpenDrawer(true);
-    };
-
-    const handleCloseDrawer: React.MouseEventHandler<HTMLButtonElement> = () => {
-        setOpenDrawer(false);
-    };
-
-    return(
-        <Box className={headerStyle}>
-            <AppBar position="static" > 
-                <Toolbar>
-                    <IconButton
-                        aria-label="drawer menu"
-                        onClick={handleOpenDrawer}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" noWrap >
-                        {" Journey Through Middle Earth "}
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-            <Drawer
-                anchor={"left"}
-                open={openDrawer}
-                onClose={handleCloseDrawer} 
-            >
-                <List>
-                    {
-                    listItems.map((listItem :IHeaderListItem)=> (
-                        <NavLink to={`/${listItem.url}`} key={listItem.title} >
-                            <ListItem button>
-                                <ListItemText primary={listItem.title} />
-                            </ListItem>
-                        </NavLink>
-                    ))
-                    }
-                </List>
-            </Drawer>
-        </Box>
-    )
+export const Header = ({ listItems }: HeaderProps) => {
+  return (
+    <div className={headerStyle}>
+      {listItems.map((menuItem) => 
+        <NavLink to={`/${menuItem.url}`} key={menuItem.title} className={navlinkStyle}>
+            <p className={menuItemStyle}> {menuItem.title} </p>
+        </NavLink> 
+      )}
+    </div>
+  );
 };

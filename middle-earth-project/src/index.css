@@ -2,14 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer utilities {
-    .bg-main-image{
-        background-image: url("../src/images/background-main-page.jpg");
-    }
-} */
-
-/* @layer components {
-    .something {
-        @apply 
-    }
-} */
+@layer base {
+  @font-face {
+    font-family: Elvish;
+    src: url(../src/Assets/fonts/Elvish.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Hobbiton;
+    src: url(../src/Assets/fonts/Hobbiton.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: KhuzdulErebor;
+    src: url(../src/Assets/fonts/KhuzdulErebor.ttf) format("ttf");
+  }
+}

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { Header } from "../Components/Header/Header";
 import { StartingPage } from "../Pages/StartingPage/StartingPage";
 import { TheHobbitHome } from "../Pages/Hobbit/HobbitHome";
 import { TheOneRingHome } from "../Pages/Lord-of-the-Rings/TheOneRingHome";
 import { Journeys, IHeaderListItem } from "../types";
 import { container, appContainer } from "./styling";
+import { Footer } from "../Components/Footer/Footer";
 
-function App() {
+const App = () => {
   const [journey, setJourney] = useState<boolean>();
   const [journeyChoose, setJourneyChoose] = useState<Journeys>();
 
@@ -55,12 +56,14 @@ function App() {
             <Route path="/hobbit">
               <TheHobbitHome />
             </Route>
-
             <Route path="/lord-of-the-rings">
               <TheOneRingHome />
             </Route>
+            <Route path="/">
+              <Redirect to={`/${headerListItems[0].url}`} />
+            </Route>
           </Switch>
-          {/* footer */}
+          <Footer/>
         </div>
       )}
     </Router>

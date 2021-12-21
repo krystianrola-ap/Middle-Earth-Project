@@ -1,5 +1,20 @@
 export const movieItemsContainer = `
-    w-full h-full
+    w-full h-body
     flex flex-row justify-around items-center
-    border-2 border-green-500
+    overflow-x-hidden
 `;
+
+ export const fellowshipStyle =
+ `
+ animate-left-animation-fade-in
+ `;
+
+ export const twoTowerStyle =
+ `
+ animate-top-animation-fade-in
+ `;
+
+ export const returnOfTheKingStyle =
+ `
+ animate-right-animation-fade-in
+ `;

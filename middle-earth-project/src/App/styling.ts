@@ -1,11 +1,10 @@
 export const container = `  
-    w-full min-h-screen
-    border-2 border-yellow-500
+    w-full h-screen
 `;
 
 export const appContainer = `
     box-border
-    w-full min-h-full
-    border-2 border-red-500
+    w-full h-full
+    bg-dark-zinc
 `;
 

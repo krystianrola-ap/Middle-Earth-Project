@@ -4,10 +4,27 @@ module.exports = {
   theme: {
     extend: { 
       backgroundImage: {
-        'main-image': "url('../src/images/ring-eye-background.jpg')",
-        //'hobbit-logo': "url('../src/images/hobbit-logo.jpg')",
-        
+        'main-image': "url('../src/Assets/images/ring-eye-background.jpg')"
       }, 
+      colors: {
+        'dark-zinc':'#1C1917',
+        'transparent-color' : 'rgba(255, 255, 255, .10)',
+        'menu-item-color':'rgba(255, 223, 0, .65)',
+      },
+      boxShadow: {
+        'border-blur': '0px 0px 5px 5px rgba(255, 255, 255, .10)',
+        'hover-blur': '0 10px 6px -6px rgba(255, 223, 0, .30)',
+      },
+      fontFamily: {
+        'hobbiton': ['Hobbiton', 'serif'],
+        'elvish': ['Elvish', 'serif'],
+        'khuzdul-erebor': ['KhuzdulErebor', 'serif']
+      },
+      height: {
+        'body': '88%', 
+        'header':'6.5%', 
+        'footer': '5.5%', 
+      },
       keyframes:{
         'left-fade-in':{
           '0%' :{
@@ -28,11 +45,33 @@ module.exports = {
             opacity: '1',
             transform: 'translateX(0px)',
           }
+        },
+        'top-fade-in':{
+          '0%' :{
+            opacity: '0',
+            transform: 'translateY(-50px)',
+          },
+          '100%':{
+            opacity: '1',
+            transform: 'translateY(0px)',
+          }
+        },
+        'bottom-fade-in':{
+          '0%' :{
+            opacity: '0',
+            transform: 'translateY(50px)',
+          },
+          '100%':{
+            opacity: '1',
+            transform: 'translateY(0px)',
+          }
         }
       },
       animation:{
         'left-animation-fade-in' : 'left-fade-in 2s ease-out',
-        'right-animation-fade-in' : 'right-fade-in 2s ease-out'
+        'right-animation-fade-in' : 'right-fade-in 2s ease-out',
+        'top-animation-fade-in' : 'top-fade-in 2s ease-out',
+        'bottom-animation-fade-in' : 'bottom-fade-in 2s ease-out',
       }
     },
   },
@@ -40,7 +79,7 @@ module.exports = {
     extend: {
       width: ['hover', 'focus'],
       padding: ['hover', 'focus', 'group-hover'],
-
+      borderWidth: ['hover']
     },
   },
   plugins: [],

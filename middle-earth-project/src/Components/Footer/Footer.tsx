@@ -1,8 +1,9 @@
 import React from "react";
+import { footerContainer } from "./styling";
 
-export const Footer = () =>{
+export const Footer = () => {
     return (
-        <div>
+        <div className={footerContainer}>
             
         </div>
     )

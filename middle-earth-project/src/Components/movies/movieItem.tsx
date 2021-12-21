@@ -2,13 +2,14 @@ import React from "react";
 import {imageStyling } from "./styling";
 
 interface MovieItemProps { 
-    movieImageUrl:string
+    movieImageUrl:string;
+    style? : string
 }
 
-export const MovieItem = ({movieImageUrl} : MovieItemProps) => {
+export const MovieItem = ({movieImageUrl, style} : MovieItemProps) => {
     return(
-        <article>
+        <div className={style} >
             <img src={movieImageUrl} alt="movie poster" className={imageStyling}/>
-        </article>
+        </div>
     );
 }

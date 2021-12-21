@@ -28,17 +28,17 @@ export const StartingPage = ({handleChoose}: StartingPageProps) => {
   }
 
   return (
-    <section className={sectionStyle}>
-      <article className={hobbitAreaStyle}>
+    <div className={sectionStyle}>
+      <div className={hobbitAreaStyle}>
         <NavLink exact to="/hobbit" onClick={handleHobbitClick}>
           <img src={hobbitLogo} alt="hobbit-logo" className={hobbitLogoStyle} />
         </NavLink>
-      </article>
-      <article className={lotrAreaStyle}>
+      </div>
+      <div className={lotrAreaStyle}>
         <NavLink exact to="/lord-of-the-rings" onClick={handleLotrClick}>
           <img src={lotrLogo} alt="lotr-logo" className={lortLogoStyle} />
         </NavLink>
-      </article>
-    </section>
+      </div>
+    </div>
   );
 };
