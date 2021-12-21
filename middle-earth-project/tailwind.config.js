@@ -19,9 +19,10 @@ module.exports = {
         'header-fontsize': '1.75rem'
       },
       fontFamily: {
-        'hobbiton': ['Hobbiton', 'serif'],
-        'elvish': ['Elvish', 'serif'],
-        'khuzdul-erebor': ['KhuzdulErebor', 'serif']
+        'hobbiton': ['Hobbiton', 'Patrick Hand SC', 'serif'],
+        'elvish': ['Elvish', 'Patrick Hand SC', 'serif'],
+        'khuzdul-erebor': ['KhuzdulErebor', 'Patrick Hand SC', 'serif'],
+        'patrick': ['Patrick Hand SC', 'serif']
       },
       height: {
         'body': '88%', 
@@ -85,7 +86,8 @@ module.exports = {
     extend: {
       width: ['hover', 'focus'],
       padding: ['hover', 'focus', 'group-hover'],
-      borderWidth: ['hover']
+      borderWidth: ['hover'],
+      fontFamily: ['hover']
     },
   },
   plugins: [],

@@ -16,6 +16,7 @@ export interface IMovie {
     releaseYear: string;
     summary: string[];
     movieURL: string;
+    imageURL: string
 }
 
 export interface IMovieSummaries {

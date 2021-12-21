@@ -10,7 +10,7 @@ import {
 import {Journeys} from "../../types";
 
 interface StartingPageProps {
-  handleChoose: (value: boolean) => void;
+  handleChoose: (value: boolean, journey: Journeys) => void;
 }
 
 export const StartingPage = ({handleChoose}: StartingPageProps) => {
@@ -18,12 +18,12 @@ export const StartingPage = ({handleChoose}: StartingPageProps) => {
   let lotrLogo = `images/lord-of-the-rings-logo.jpg`;
 
   const handleHobbitClick : React.MouseEventHandler<HTMLAnchorElement> = () => {
-    handleChoose(true);
+    handleChoose(true, Journeys.HOBBIT);
     sessionStorage.setItem("journey", Journeys.HOBBIT);
   };
 
   const handleLotrClick : React.MouseEventHandler<HTMLAnchorElement> = () => {
-    handleChoose(true);
+    handleChoose(true, Journeys.LORD_OF_THE_RINGS);
     sessionStorage.setItem("journey", Journeys.LORD_OF_THE_RINGS);
   }
 
