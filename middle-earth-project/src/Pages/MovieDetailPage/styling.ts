@@ -1,9 +1,10 @@
 export const detailPageContainer =
 `
-box-border
- w-body h-body p-2 
+    box-border
+ w-body min-h-body h-fit p-2 
  mx-auto
  text-white font-patrick 
+ bg-wooden
  
 `;
 
@@ -24,44 +25,6 @@ flex flex-row items-center
 export const moviePoster = 
 `
 w-3/12 mx-40
-
-`;
-
-export const infoStyle = 
-`
-w-full 
-
-`;
-
-export const infoItem = 
-`
-flex flex-row items-center
-m-2
-text-lg
-
-`;
-
-export const icon = 
-`
-p-3
-
-`;
-
-export const infoTitle = 
-`
-w-2/6 p-2
-
-`;
-
-export const info = 
-`
-p-2
-`;
-
-export const movieSummaryStyle = 
-`
-w-4/5 mx-auto
-text-lg
 
 `;
 

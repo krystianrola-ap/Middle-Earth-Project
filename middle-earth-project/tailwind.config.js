@@ -4,33 +4,57 @@ module.exports = {
   theme: {
     extend: { 
       backgroundImage: {
-        'main-image': "url('../src/Assets/images/ring-eye-background.jpg')"
+        'main-image': "url('../src/Assets/images/ring-eye-background.jpg')",
+        'journey-background-image' :"url('../src/Assets/images/middle-earth-map.jpg')",
+        'background-image': "url('../src/Assets/images/landscape.jpg')",
       }, 
       colors: {
         'dark-zinc':'#1C1917',
         'transparent-color' : 'rgba(255, 255, 255, .10)',
         'menu-item-color':'rgba(255, 223, 0, .65)',
+        'wooden':'rgba(89, 88, 86, 0.70)',
+        'header': 'rgba(64, 76, 36, 1.0)',
+        'border-color': 'rgb(212, 201, 193)',
+        'button-context' : 'rgba(255, 255, 255, .50)',
       },
       boxShadow: {
         'border-blur': '0px 0px 5px 5px rgba(255, 255, 255, .10)',
         'hover-blur': '0 10px 6px -6px rgba(255, 223, 0, .30)',
       },
       fontSize:{
-        'header-fontsize': '1.75rem'
+        'header-fontsize': '1.2rem'
       },
       fontFamily: {
         'hobbiton': ['Hobbiton', 'Patrick Hand SC', 'serif'],
         'elvish': ['Elvish', 'Patrick Hand SC', 'serif'],
         'khuzdul-erebor': ['KhuzdulErebor', 'Patrick Hand SC', 'serif'],
-        'patrick': ['Patrick Hand SC', 'serif']
+        'patrick': ['Patrick Hand SC', 'serif'],
+        'aniron':['Aniron', 'serif']
       },
       height: {
-        'body': '88%', 
-        'header':'6.5%', 
-        'footer': '5.5%', 
+        'body': '91%', 
+        'header':'9%', 
+        'footer': '6%', 
+        '30':'32rem'
       },
       width: {
         'body': '70%'
+      },
+      minWidth:{
+        'character-min-width': '250px'
+      },
+      maxWidth:{
+        'character-container': '15%',
+        '1/2':'50%'
+      },
+      top:{
+        '20': '20px',
+      },
+      right:{
+        '20': '20px'
+      },
+      borderRadius:{
+        'round': '5px'
       },
       keyframes:{
         'left-fade-in':{
@@ -90,7 +114,9 @@ module.exports = {
       fontFamily: ['hover']
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')
+  ],
 }
 
 /**

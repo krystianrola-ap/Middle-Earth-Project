@@ -1,6 +1,8 @@
+
 export const movieItemsContainer = `
-    w-full h-body
     flex flex-row justify-around items-center
+    w-full h-body 
+    
 `;
 
  export const fellowshipStyle =

@@ -17,4 +17,8 @@
     font-family: KhuzdulErebor;
     src: url('../src/Assets/fonts/KhuzdulErebor.ttf') format("truetype");
   }
+  @font-face {
+    font-family: Aniron;
+    src: url('../src/Assets/fonts/aniron.ttf') format("truetype");
+  }
 }
