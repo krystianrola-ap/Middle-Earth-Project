@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {movieItemsContainer} from "./styling";
 import { MovieItem } from "../../Components/movies/movieItem";
+
+const movieItemsContainer = `w-full h-body flex flex-row justify-around items-center bg-dark-zinc`;
+
+const unexpectedJourneyStyle = `animate-right-animation-fade-in md:animate-left-animation-fade-in`;
+const desolationOfSmaugStyle = `animate-left-animation-fade-in md:animate-top-animation-fade-in`;
+const fiveArmiesStyle = `animate-right-animation-fade-in`;
 
 export const TheHobbitHome = () => {
     let an_unexpected_journey : string = "/images/An_Unexpected_Journey.png";
@@ -11,13 +16,13 @@ export const TheHobbitHome = () => {
     return(
         <section className={movieItemsContainer}>
             <Link to="/hobbit/an_unexpected_journey">
-                <MovieItem movieImageUrl={an_unexpected_journey}/>
+                <MovieItem movieImageUrl={an_unexpected_journey} animationStyle={unexpectedJourneyStyle}/>
             </Link>
             <Link to="/hobbit/the_desolation_of_smaug">
-                <MovieItem movieImageUrl={desolation_of_smaug}/>
+                <MovieItem movieImageUrl={desolation_of_smaug} animationStyle={desolationOfSmaugStyle}/>
             </Link>
             <Link to="/hobbit/the_battle_of_the_five_armies">
-                <MovieItem movieImageUrl={battle_of_the_five_armies}/>
+                <MovieItem movieImageUrl={battle_of_the_five_armies} animationStyle={fiveArmiesStyle}/>
             </Link>
         </section>
     )

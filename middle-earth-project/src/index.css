@@ -6,10 +6,6 @@
 
 @layer base {
   @font-face {
-    font-family: Elvish;
-    src: url('../src/Assets/fonts/Elvish.ttf') format("truetype");
-  }
-  @font-face {
     font-family: Hobbiton;
     src: url('../src/Assets/fonts/Hobbiton.ttf') format("truetype");
   }

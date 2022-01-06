@@ -1,27 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MovieSummaries from "../../Assets/MovieSummaries.json";
-import {
-  IMovie,
-  IMovieInfoAPI,
-  IJsonMovies,
-} from "../../types";
+import { IMovie, IMovieInfoAPI, IJsonMovies } from "../../types";
 import axios from "axios";
-import {
-  detailPageContainer,
-  title,
-  movieInfoContainer,
-  moviePoster,
-} from "./styling";
 import { MovieDescription } from "../../Components/MovieDetails/MovieDescription";
 import { MovieInformation } from "../../Components/MovieDetails/MovieInformation";
 
-interface ParamTypes {
+const detailPageContainer = `box-border w-body min-h-body h-fit p-2 mx-auto
+ text-white font-patrick bg-wooden`;
+const title = `w-full p-4 text-center text-header-fontsize font-elvish hover:font-patrick`;
+const movieInfoContainer = `flex flex-row items-center `;
+const moviePoster = `w-3/12 mx-40`;
+
+interface ParamType {
   id: string;
 }
 
 export const MovieDetailPage = () => {
-  let { id } = useParams<ParamTypes>();
+  let { id } = useParams<ParamType>();
   const [data, setData] = useState<IMovieInfoAPI>({
     _id: "not provided",
     name: "not provided",
@@ -35,9 +31,7 @@ export const MovieDetailPage = () => {
   const [chosenMovie, setChosenMovie] = useState<IMovie>();
 
   useEffect(() => {
-    let movie = MovieSummaries.movie.find(
-      (item) => item.movieURL === id
-    ) as IMovie;
+    let movie = MovieSummaries.movie.find((item) => item.movieURL === id) as IMovie;
 
     setChosenMovie(movie);
 

@@ -3,6 +3,13 @@ export enum Journeys {
     "LORD_OF_THE_RINGS" = "lord-of-the-rings"
 }
 
+export enum ActionType {
+    PATRICK = 'patrick',
+    ANIRON = 'aniron',
+    KHUZDUL = 'khuzdul'
+  
+}
+
 export interface IHeaderListItem { 
     title : string,
     url : string

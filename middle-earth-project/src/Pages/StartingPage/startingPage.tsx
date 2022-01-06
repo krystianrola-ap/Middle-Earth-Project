@@ -1,13 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import {
-  sectionStyle,
-  hobbitAreaStyle,
-  lotrAreaStyle,
-  hobbitLogoStyle,
-  lortLogoStyle,
-} from "./styling";
 import {Journeys} from "../../types";
+
+const sectionStyle = ` w-full min-h-full flex flex-row overflow-hidden
+    bg-main-image bg-center bg-no-repeat bg-cover bg-opacity-50`;
+const hobbitAreaStyle = `w-1/2 h-100 flex justify-center items-center`; 
+const hobbitLogoStyle = `w-72 h-auto border rounded animate-left-animation-fade-in 
+  hover:p-2 hover:border-yellow-400`;
+const lotrAreaStyle = `w-1/2 h-100 flex justify-center items-center`;
+const lortLogoStyle = `w-72 h-auto border rounded animate-right-animation-fade-in
+  hover:p-2 hover:border-yellow-400`;
 
 interface StartingPageProps {
   handleChoose: (value: boolean, journey: Journeys) => void;

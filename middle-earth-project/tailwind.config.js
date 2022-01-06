@@ -19,14 +19,15 @@ module.exports = {
       },
       boxShadow: {
         'border-blur': '0px 0px 5px 5px rgba(255, 255, 255, .10)',
-        'hover-blur': '0 10px 6px -6px rgba(255, 223, 0, .30)',
+        'bottom-hover-blur': '0 10px 6px -6px rgba(255, 223, 0, .30)',
+        'left-hover-blur':'-10px 0px 6px -6px rgba(255, 223, 0, .30)',
       },
       fontSize:{
-        'header-fontsize': '1.2rem'
+        'header-fontsize': '1.2rem',
+        'header-title': '11px',
       },
       fontFamily: {
         'hobbiton': ['Hobbiton', 'Patrick Hand SC', 'serif'],
-        'elvish': ['Elvish', 'Patrick Hand SC', 'serif'],
         'khuzdul-erebor': ['KhuzdulErebor', 'Patrick Hand SC', 'serif'],
         'patrick': ['Patrick Hand SC', 'serif'],
         'aniron':['Aniron', 'serif']
@@ -47,11 +48,18 @@ module.exports = {
         'character-container': '15%',
         '1/2':'50%'
       },
+      padding:{
+        'nine': '12%',
+      },
       top:{
-        '20': '20px',
+        '20': '10px',
       },
       right:{
-        '20': '20px'
+        '20': '10px'
+      },
+      left:{
+        '10':'10%',
+        '30': '30%'
       },
       borderRadius:{
         'round': '5px'
@@ -96,6 +104,22 @@ module.exports = {
             opacity: '1',
             transform: 'translateY(0px)',
           }
+        },
+        'open-menu':{
+          '0%' :{
+            transform: 'translateX(0%)',
+          },
+          '100%':{
+            transform: 'translateX(100%)',
+          }
+        },
+        'close-menu':{
+          '0%' :{
+            transform: 'translateX(100%)',
+          },
+          '100%':{
+            transform: 'translateX(0%)',
+          }
         }
       },
       animation:{
@@ -103,15 +127,26 @@ module.exports = {
         'right-animation-fade-in' : 'right-fade-in 2s ease-out',
         'top-animation-fade-in' : 'top-fade-in 2s ease-out',
         'bottom-animation-fade-in' : 'bottom-fade-in 2s ease-out',
+        'open-menu':'open-menu 350ms ease-out forwards',
+        'close-menu':'close-menu 350ms ease-out forwards',
       }
     },
+    screens:{
+      'xs':'340px',
+      'sm':'640px',
+      'md':'768px',
+      'lg':'1024px',
+      'xl':'1280px',
+      '2xl':'1536px',
+    }
   },
   variants: {
     extend: {
       width: ['hover', 'focus'],
       padding: ['hover', 'focus', 'group-hover'],
-      borderWidth: ['hover'],
-      fontFamily: ['hover']
+      borderWidth: ['hover', 'group-hover'],
+      fontFamily: ['hover'],
+      border: ['hover', 'group-hover']
     },
   },
   plugins: [

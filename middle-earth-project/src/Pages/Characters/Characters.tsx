@@ -1,10 +1,13 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { MainCharacter } from "../../Components/Character/MainCharacter";
 import { SupportCharacter } from "../../Components/Character/SupportCharacter";
+import { FontContext } from "../../Context/FontContext";
 import { ICharacter, IDocs } from "../../types";
 
 export const Characters = () => {
+  const { font } = useContext(FontContext);
+  
   const [loading, setLoading] = useState<boolean>(false);
   const [mainCharacters, setMainCharacters] = useState<ICharacter[]>([]);
   const [supportCharacters, setSupportCharacters] = useState<ICharacter[]>();
@@ -62,7 +65,7 @@ export const Characters = () => {
     scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-700 hover:scrollbar-thumb-blue-200
     `;
   let tabstyle = `w-full py-3 flex flex-row justify-center items-center  `;
-  let titleStyle = `flex-1 font-semibold font-aniron text-center py-3 cursor-pointer`;
+  let titleStyle = `flex-1 py-3 font-semibold font-${font.font} text-center cursor-pointer`;
   let activeStyle = `text-lg`;
   let normalStyle = `text-xs`;
 
