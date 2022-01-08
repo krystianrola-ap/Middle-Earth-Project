@@ -53,19 +53,24 @@ export const Characters = () => {
           [[], []]
         );
 
+        let support = fail.filter((item) => 
+           !["5cdbe49b7ed9587226e794a0","5cdbe47d7ed9587226e7949f","5cd99d4bde30eff6ebccfe10"].includes(item._id)
+        )
+
         setMainCharacters(pass);
-        setSupportCharacters(fail);
+        setSupportCharacters(support);
       });
     setLoading(true);
   }, []);
 
-  let container = `flex flex-col w-body my-1 mx-auto p-1`;
-  let mainCharactersStyle = `flex flex-row flex-wrap justify-around items-start 
-    w-full m-auto h-30 overflow-y-scroll bg-background-image bg-center bg-no-repeat bg-cover 
+  let container = `flex flex-col w-full my-1 mx-auto p-1 md:w-body`;
+  let charactersStyle = `flex flex-row flex-wrap justify-around items-start
+    w-full m-auto h-30 overflow-y-scroll  
     scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-700 hover:scrollbar-thumb-blue-200
-    `;
+    md:bg-background-image md:bg-center md:bg-no-repeat md:bg-cover
+  `;
   let tabstyle = `w-full py-3 flex flex-row justify-center items-center  `;
-  let titleStyle = `flex-1 py-3 font-semibold font-${font.font} text-center cursor-pointer`;
+  let titleStyle = `flex-1 py-3 font-semibold ${font.font} text-center cursor-pointer`;
   let activeStyle = `text-lg`;
   let normalStyle = `text-xs`;
 
@@ -100,7 +105,7 @@ export const Characters = () => {
       </div>
 
       {loading && (
-        <div className={mainCharactersStyle}>
+        <div className={charactersStyle}>
           {characterChose ? (
             <>
               {mainCharacters?.map((item) => {
@@ -110,7 +115,7 @@ export const Characters = () => {
           ) : (
             <>
               {supportCharacters?.map((item) => {
-                return <SupportCharacter character={item} />;
+                  return <SupportCharacter character={item} />
               })}
             </>
           )}

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MovieItem } from "../../Components/movies/movieItem";
 
-const movieItemsContainer = `w-full h-body flex flex-row justify-around items-center bg-dark-zinc`;
+const movieItemsContainer = `flex flex-col justify-around items-center w-full h-body sm:flex-row `;
 
 const unexpectedJourneyStyle = `animate-right-animation-fade-in md:animate-left-animation-fade-in`;
 const desolationOfSmaugStyle = `animate-left-animation-fade-in md:animate-top-animation-fade-in`;

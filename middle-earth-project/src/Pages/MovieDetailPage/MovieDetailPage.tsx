@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MovieSummaries from "../../Assets/MovieSummaries.json";
 import { IMovie, IMovieInfoAPI, IJsonMovies } from "../../types";
 import axios from "axios";
 import { MovieDescription } from "../../Components/MovieDetails/MovieDescription";
 import { MovieInformation } from "../../Components/MovieDetails/MovieInformation";
+import { FontContext } from "../../Context/FontContext";
 
-const detailPageContainer = `box-border w-body min-h-body h-fit p-2 mx-auto
- text-white font-patrick bg-wooden`;
-const title = `w-full p-4 text-center text-header-fontsize font-elvish hover:font-patrick`;
-const movieInfoContainer = `flex flex-row items-center `;
-const moviePoster = `w-3/12 mx-40`;
+const detailPageContainer :string = `
+  box-border w-full overflow-hidden  p-2 mx-auto text-white font-patrick 
+  md:w-body md:min-h-body md:overflow-hidden`;
+const title :string = `w-full p-4 text-center text-header-fontsize `;
+const movieInfoContainer :string = `flex flex-col items-center md:flex-row `;
+const moviePoster :string = ` w-4/6 mx-0  border rounded border-yellow-400 p-1
+  md:w-60 sm:mx-10 lg:mx-20 xl:mx-40 `;
 
 interface ParamType {
   id: string;
@@ -18,6 +21,7 @@ interface ParamType {
 
 export const MovieDetailPage = () => {
   let { id } = useParams<ParamType>();
+  const {font} = useContext(FontContext)
   const [data, setData] = useState<IMovieInfoAPI>({
     _id: "not provided",
     name: "not provided",
@@ -53,7 +57,7 @@ export const MovieDetailPage = () => {
 
   return (
     <div className={detailPageContainer}>
-      <h6 className={title}>{data.name}</h6>
+      <h6 className={`${title} ${font.font}`}>{data.name}</h6>
       <div className={movieInfoContainer}>
         <img
           src={`/images/posters/${chosenMovie?.imageURL}`}

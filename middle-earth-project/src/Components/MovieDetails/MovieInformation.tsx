@@ -11,6 +11,8 @@ import {
 } from "react-icons/fi";
 import { MovieInformationItem } from "./MovieInformationItem";
 
+const infoStyle :string = `w-full`;
+
 interface MovieInformationProps {
   chosenMovie: IMovie;
   api_data: IMovieInfoAPI;
@@ -21,7 +23,7 @@ export const MovieInformation = ({
   api_data,
 }: MovieInformationProps) => {
 
-  const infoStyle = `w-full `;
+  
 
   const GetGenresString = () => {
     let genres: string = "- ";

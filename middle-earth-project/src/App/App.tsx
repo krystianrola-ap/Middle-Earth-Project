@@ -15,10 +15,10 @@ import { Characters } from "../Pages/Characters/Characters";
 import { FontContext } from "../Context/FontContext";
 
 //Page styles
-const container = ` w-full h-screen overflow-y-scroll 
+const container = ` w-full h-screen overflow-y-scroll overflow-x-hidden
   scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-700 hover:scrollbar-thumb-blue-200`;
-const switchContainer = `box-border w-full h-full bg-wooden`;
-const buttonContainer = `fixed top-6 right-5 hidden`;
+const switchContainer = `box-border w-full h-full`;
+const buttonContainer = `fixed top-6 right-5 hidden md:block`;
 const commonBtnStyle = `outline-none bg-button-context p-1 backdrop-filter backdrop-blur-sm font-semibold`;
 const btnLeftStyle = `border border-black rounded-l-round`;
 const btnMidStyle = `border-t border-b border-x-0 border-black`;
@@ -30,15 +30,15 @@ interface ReducerType{
 
 function reducer (state :ReducerType , action: ActionType){ 
   switch (action) {
-    case ActionType.PATRICK  : return {font: 'patrick'}
-    case ActionType.ANIRON   : return {font: 'aniron'} 
-    case ActionType.KHUZDUL  : return {font: 'khuzdul-erebor'}
+    case ActionType.PATRICK  : return {font: 'font-patrick text-xl'}
+    case ActionType.ANIRON   : return {font: 'font-aniron'} 
+    case ActionType.KHUZDUL  : return {font: 'font-khuzdul-erebor text-xs'}
     default: return state;
   }
 }
 
 const App = () => {
-  const [font, dispatch] = useReducer(reducer, {font: 'patrick'})
+  const [font, dispatch] = useReducer(reducer, {font: 'font-patrick text-xl'})
 
   const [journey, setJourney] = useState<boolean>();
   const [chosenJourney, setChosenJourney] = useState<Journeys>();

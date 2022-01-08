@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Roboto&display=swap');
 
+:root{
+  background-color: rgba(89, 88, 86, 0.70);
+  min-height: 100vh;
+  height: fit-content;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

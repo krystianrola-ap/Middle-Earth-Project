@@ -1,4 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FontContext } from "../../Context/FontContext";
+
+const infoItem :string = `flex flex-row items-center m-2 text-lg`;
+const icon :string = ` p-3 md:hidden lg:block`;
+const infoTitle :string = ` w-2/6 p-2 `;
+const info :string = ` p-2 `;
 
 interface MovieInformationItemProps {
   itemIcon: any;
@@ -11,13 +17,10 @@ export const MovieInformationItem = ({
   itemTitle,
   itemInfo,
 }: MovieInformationItemProps) => {
-  const infoItem = `flex flex-row items-center m-2 text-lg `;
-  const icon = ` p-3 `;
-  const infoTitle = ` w-2/6 p-2 `;
-  const info = ` p-2 `;
+  const {font}  = useContext(FontContext);
 
   return (
-    <div className={infoItem}>
+    <div className={`${infoItem} ${font.font} text-base`}>
       <div className={icon}>{itemIcon}</div>
       <p className={infoTitle}> {itemTitle} </p>
       <p className={info}>{itemInfo}</p>

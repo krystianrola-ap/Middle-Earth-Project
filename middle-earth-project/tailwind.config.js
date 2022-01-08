@@ -63,6 +63,10 @@ module.exports = {
       },
       borderRadius:{
         'round': '5px'
+      },zIndex: {
+        '99':'99',
+        '999':'999',
+        '9999':'9999',
       },
       keyframes:{
         'left-fade-in':{
@@ -153,13 +157,3 @@ module.exports = {
     require('tailwind-scrollbar')
   ],
 }
-
-/**
- * SCREEN BREAKPOINTS:
- * sm: 340px,
- * md: 768px,
- * lg: 1024px,
- * xl: 1280px,
- * 2xl: 1536px,
- * 3xl: 1800px
- */

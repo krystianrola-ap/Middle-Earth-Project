@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FontContext } from "../../Context/FontContext";
 import { IMovie } from "../../types";
+
+
+const movieSummaryStyle :string = ` 
+  w-full p-2 mx-auto text-xl text-justify 
+  
+`;
 
 interface MovieDescriptionProps {
   chosenMovie: IMovie;
 }
 
 export const MovieDescription = ({ chosenMovie }: MovieDescriptionProps) => {
-  const movieSummaryStyle = ` w-4/5 mx-auto text-lg `;
+  const {font}  = useContext(FontContext);
 
   return (
-    <div className={movieSummaryStyle}>
+    <div className={`${movieSummaryStyle}`}>
       {chosenMovie?.summary.map((item) => (
-        <p>{item}</p>
+        <p className={`${font.font}`}>{item}</p>
       ))}
     </div>
   );
