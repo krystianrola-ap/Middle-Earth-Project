@@ -23,7 +23,6 @@ export const MovieInformation = ({
   api_data,
 }: MovieInformationProps) => {
 
-  
 
   const GetGenresString = () => {
     let genres: string = "- ";

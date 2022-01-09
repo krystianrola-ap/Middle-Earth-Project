@@ -5,7 +5,6 @@ module.exports = {
     extend: { 
       backgroundImage: {
         'main-image': "url('../src/Assets/images/ring-eye-background.jpg')",
-        'journey-background-image' :"url('../src/Assets/images/middle-earth-map.jpg')",
         'background-image': "url('../src/Assets/images/landscape.jpg')",
       }, 
       colors: {

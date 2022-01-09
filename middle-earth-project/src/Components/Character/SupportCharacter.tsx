@@ -16,7 +16,7 @@ export const SupportCharacter = ({character} :SupportCharacterProps) => {
     return(
         <div className={`${commonContainerStyle} ${costumContainerStyle}`}>
             <div className={titleContainer}>
-                <p className={title}>{character.name}</p>
+                <p className={`${title} ${font.font}`}>{character.name}</p>
             </div>
             <div className={characterContainer}>
                 <div className={characterInfoItem}>
